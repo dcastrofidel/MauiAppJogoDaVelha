@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiAppJogoDaVelha.MainPage">
+
+    <ContentPage.Background>
+        <!-- utilizei as cores do arco iris para colorir o fundo na estilização gradient-->
+        <LinearGradientBrush StartPoint="0,1" EndPoint="1,0">
+            <GradientStop Color="Red" Offset="0.1" />
+            <GradientStop Color="Orange" Offset="0.2" />
+            <GradientStop Color="Yellow" Offset="0.3" />
+            <GradientStop Color="Green" Offset="0.4" />
+            <GradientStop Color="Blue" Offset="0.6" />
+            <GradientStop Color="Indigo" Offset="0.7" />
+            <GradientStop Color="Violet" Offset="0.9" />
+        </LinearGradientBrush>
+    </ContentPage.Background>
+
+    <ContentPage.Resources>
+        <Style TargetType="Button">
+            <!-- Alterei a expessura da borda do layout e diminui a angulação das quinas -->
+            <Setter Property="BackgroundColor" Value="Transparent" />
+            <Setter Property="CornerRadius" Value="5" />
+            <Setter Property="TextColor" Value="White" />
+            <Setter Property="FontSize" Value="80" />
+            <Setter Property="BorderWidth" Value="5" />
+            <Setter Property="BorderColor" Value="White" />
+        </Style>
+    </ContentPage.Resources>
+
+    <Grid RowDefinitions="*, *, *, *" 
+          ColumnDefinitions="*, *, *"
+          ColumnSpacing="10" RowSpacing="10" Margin="10">
+
+        <Label Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3" 
+               Text="JOGO DA VELHA" TextColor="WhiteSmoke" FontSize="55 " BackgroundColor="LightSteelBlue" Padding="40" HorizontalTextAlignment="Center"  />
+            <!-- alteração no titulo centralizando, adicionando BG e alterando o tamanho da fonte -->
+        <Button x:Name="btn10" Grid.Row="1" Grid.Column="0" Clicked="Button_Clicked" />
+        <Button x:Name="btn11" Grid.Row="1" Grid.Column="1" Clicked="Button_Clicked" />
+        <Button x:Name="btn12" Grid.Row="1" Grid.Column="2" Clicked="Button_Clicked" />
+
+        <Button Grid.Row="2" Grid.Column="0" Clicked="Button_Clicked" />
+        <Button Grid.Row="2" Grid.Column="1" Clicked="Button_Clicked" />
+        <Button Grid.Row="2" Grid.Column="2" Clicked="Button_Clicked" />
+
+        <Button Grid.Row="3" Grid.Column="0" Clicked="Button_Clicked" />
+        <Button Grid.Row="3" Grid.Column="1" Clicked="Button_Clicked" />
+        <Button Grid.Row="3" Grid.Column="2" Clicked="Button_Clicked" />
+
+
+    </Grid>
+
+
+
+</ContentPage>
